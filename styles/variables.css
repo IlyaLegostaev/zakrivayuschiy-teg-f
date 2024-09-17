@@ -14,6 +14,7 @@
     --color-sparks-heart: rgba(255, 0, 0, 1);
     --color-filling: rgba(255, 0, 0, 1);
     --text-stroke-color: #666;
+    --font-variation-settings: 465;
 --background-image: repeating-linear-gradient(#000,#000 2px, transparent 2px, transparent 4px), 
 repeating-linear-gradient(90deg,#000,#000 2px, transparent 2px, transparent 4px),
 linear-gradient(#007f0c, #004306);

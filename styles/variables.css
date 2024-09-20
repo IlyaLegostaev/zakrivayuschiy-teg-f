@@ -2,7 +2,6 @@
 :root {
     --fonts: 'Inter-Variable', sans-serif;
     --accent-fonts: 'PressStart2P', monospace;
-    --font-variation-settings: 400;
     --background-color: rgba(0, 0, 0, 1);
     --accent-color: rgba(0, 204, 20, 1);
     --color-text: rgba(0, 204, 20, 1);

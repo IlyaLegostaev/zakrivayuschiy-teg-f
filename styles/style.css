@@ -17,7 +17,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-color: var(--background-color);
+  background-color: var(--background-color) rgba(0, 0, 0, 1);
   color: var(--accent-color);
   background-image: var(--background-image);
   background-size: cover;
@@ -99,7 +99,6 @@
 
 .theme-menu__button:focus {
   outline: none;
-  opacity: 60%;
 }
 
 
@@ -130,7 +129,7 @@
   position: absolute;
   left: -15px;
   top: 0;
-  animation-name: arrow;
+  animation-name: lideInFromright;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -160,6 +159,7 @@
 
 
 .card-title {
+  font-variation-settings: "wght" var(--font-variation-title);
   font-size: var(--font-size-text);
   min-height: 33px;
   line-height: normal;
@@ -170,7 +170,6 @@
 
 .card_description {
   position: relative;
-  max-height: 696px;
 }
 
 
@@ -186,7 +185,7 @@
   mix-blend-mode: hard-light;
   text-shadow: 0 0 1px var(--background-color);
   right: 25px;
-  top: 25px;
+  top: 27px;
 }
 
 @supports((text-stroke: 1px #FFF) or (-webkit-text-stroke: 1px #FFF)) {
@@ -198,18 +197,17 @@
 
 .image {
   object-fit: cover;
-  background-size: cover;
   max-width: 696px;
   inline-size: 100%;
   display: block;
   aspect-ratio: 1 / 1;
-  border-block-end: 2px solid var(--accent-color);
-  border-block-start: 2px solid var(--accent-color);
 }
 
 
 .card-text {
+  border-block-start: 2px solid var(--accent-color);
   display: grid;
+  font-variation-settings: 'wght' var(--font-variation-text);
   gap: 28px;
   padding: 26px 25px;
   font-size: 18px;
@@ -220,7 +218,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  padding: 0 23px 22px 0;
+  padding: 0 25px 25px 0;
   gap: 12px;
   height: fit-content;
 }
@@ -243,7 +241,6 @@
 
 .button:focus {
   border: none;
-  outline: 2px solid var(--accent-color);
 }
 
 
@@ -303,14 +300,13 @@
   margin-inline: auto;
   width: 335px;
   padding-block: 15px;
-  position: relative;
 }
 
 
 .floppy {
   color: var(--color-button);
-  block-size: 22px;
-  inline-size: 22px;
+  block-size: 21px;
+  inline-size: 21px;
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
@@ -319,7 +315,7 @@
 
 .window-modal {
   max-inline-size: 353px;
-  max-height: 191px;
+  min-height: 191px;
   border: none;
   outline: 2px solid var(--accent-color);
   font-size: 14px;
@@ -330,8 +326,12 @@
   padding: 30px;
 }
 
+.window-modal::backdrop {
+  background-color: rgba(0, 0, 0, 1);
+  opacity: 75%;
+}
 
-.window-modal:is([open]) .modal-form {
+.modal-form {
   display: grid;
   gap: 30px;
   align-self: center;
@@ -370,10 +370,15 @@
   }
 
 
-  .conteiner-button {
-    padding: 0 23px 22px 0;
-  }
+  .footer_button {
+    flex-direction: column;
+    width: 306px;
+  } 
 
+  .floppy {
+    block-size: 28px;
+    inline-size: 28px;
+  }
 
   .window-modal {
     max-inline-size: 341px;

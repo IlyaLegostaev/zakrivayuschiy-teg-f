@@ -219,7 +219,7 @@
   justify-content: end;
   align-items: center;
   padding: 0 25px 25px 0;
-  gap: 12px;
+  gap: 5px;
   height: fit-content;
 }
 
@@ -287,9 +287,20 @@
 }
 
 
+.card__icon-button:focus {
+  outline: none;
+}
+
+
 .card__like-button {
   width: 131px;
   height: 38px;
+}
+
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+  transition: border 0.3s ease;
 }
 
 
@@ -369,6 +380,9 @@
     padding-block-start: 120px;
   }
 
+  .card-img_label {
+    right: 11px;
+  }
 
   .footer_button {
     flex-direction: column;
